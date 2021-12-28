@@ -1,4 +1,4 @@
-package main
+package tiny_proc
 
 import (
 	"errors"
@@ -7,7 +7,7 @@ import (
 
 func Proc(args []string, dir *string) error {
 	if len(args) == 0 {
-		errors.New("Proc needs atleast 1 arg")
+		return errors.New("Proc needs atleast 1 arg")
 	}
 
 	proc := exec.Command(args[0], args[1:]...)
@@ -20,5 +20,3 @@ func Proc(args []string, dir *string) error {
 	println(string(out))
 	return err
 }
-
-func main() {}
