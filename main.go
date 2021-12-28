@@ -20,3 +20,5 @@ func Proc(args []string, dir *string) error {
 	println(string(out))
 	return err
 }
+
+func main() {}
